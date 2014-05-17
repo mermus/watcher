@@ -23,8 +23,9 @@ IP="10.10.43.42"
 SID=""
 PORT="65020"
 
-FICHIER_VERSION="version.txt"
-FICHIER_CONNECTEUR="aspen.env"
+REPERTOIRE_VERSION="/.../version"
+REPERTOIRE_CONNECTEUR="/.../processlist"
+FICHIER_MODULE="aspen.env"
 #~~~~~~~~~~~~~~~~~~~~~~~
 
 #-----------------------------------
@@ -43,5 +44,6 @@ lancementTache() {
 #-----------------------------------
 
 ecritureRapport $SITE $Nom $VERSION $Type $CONNECTEUR $ETAT $Module $IP $SID $PORT
-recuperationVersion $FICHIER_VERSION
-recuperationConnecteur $FICHIER_CONNECTEUR
+recuperationVersion $REPERTOIRE_VERSION
+recuperationConnecteur $REPERTOIRE_CONNECTEUR
+recuperationModules $FICHIER_MODULE  
