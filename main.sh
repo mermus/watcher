@@ -12,10 +12,15 @@ source recuperationConnecteur.sh
 
 # Tests Unitaires
 #~~~~~~~~~~~~~~~~~~~~~~~
+SITE="Gambetta"
+Nom="Prod"
 VERSION="0.0"
+Type="Linux ou AIX"
 CONNECTEUR="Laboratoire"
 ETAT="on"
+Module="Vitale"
 IP="10.10.43.42"
+SID=""
 PORT="65020"
 
 FICHIER_VERSION="version.txt"
@@ -37,6 +42,6 @@ lancementTache() {
 # TODO : ... Claudie
 #-----------------------------------
 
-ecritureRapport $VERSION $CONNECTEUR $ETAT $IP $PORT
+ecritureRapport $SITE $Nom $VERSION $Type $CONNECTEUR $ETAT $Module $IP $SID $PORT
 recuperationVersion $FICHIER_VERSION
 recuperationConnecteur $FICHIER_CONNECTEUR
