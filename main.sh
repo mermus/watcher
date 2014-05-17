@@ -30,7 +30,7 @@ FICHIER_CONNECTEUR="aspen.env"
 #-----------------------------------
 # FONCTIONS
 #-----------------------------------
-# lancement tous les jours a 23H
+# lancement tous les Dimanches a 23H
 
 lancementTache() {
    echo "lancement de la tache"
