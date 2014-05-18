@@ -9,22 +9,26 @@
 source ecritureRapport.sh
 source recuperationVersion.sh
 source recuperationConnecteur.sh
+source recuperationModules.sh
 
 # Tests Unitaires
 #~~~~~~~~~~~~~~~~~~~~~~~
 SITE="Gambetta"
-Nom="Prod"
+NOM="Prod"
 VERSION="0.0"
-Type="Linux ou AIX"
+# TYPE
+#      0 Linux 
+#      1 AIX
+TYPE="0"
 CONNECTEUR="Laboratoire"
 ETAT="on"
-Module="Vitale"
+MODULE="Vitale"
 IP="10.10.43.42"
-SID=""
+SID="Gambetta"
 PORT="65020"
 
-REPERTOIRE_VERSION="/.../version"
-REPERTOIRE_CONNECTEUR="/.../processlist"
+REPERTOIRE_VERSION="version"
+REPERTOIRE_CONNECTEUR="processlist"
 FICHIER_MODULE="aspen.env"
 #~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,7 +47,8 @@ lancementTache() {
 # TODO : ... Claudie
 #-----------------------------------
 
-ecritureRapport $SITE $Nom $VERSION $Type $CONNECTEUR $ETAT $Module $IP $SID $PORT
 recuperationVersion $REPERTOIRE_VERSION
 recuperationConnecteur $REPERTOIRE_CONNECTEUR
 recuperationModules $FICHIER_MODULE  
+
+ecritureRapport $SITE $NOM $REPERTOIRE_VERSION $TYPE $REPERTOIRE_CONNECTEUR $ETAT $MODULE $IP $SID $PORT
