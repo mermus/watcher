@@ -10,15 +10,18 @@ source ecritureRapport.sh
 source recuperationVersion.sh
 source recuperationConnecteur.sh
 source recuperationModules.sh
-#source recuperationType.sh
+source recuperationType.sh
+source recuperationNom.sh
+source recuperationSite.sh
+source recuperationVersionMajeur.sh
 
 # Tests Unitaires
 #~~~~~~~~~~~~~~~~~~~~~~~
-SITE="Gambetta"
+SITE="site"
 NOM="Prod"
 VERSION="0.0"
 # TYPE
-#      0 Linux 
+#      0 Linux
 #      1 AIX
 TYPE="0"
 CONNECTEUR="Laboratoire"
@@ -31,6 +34,10 @@ PORT="65020"
 REPERTOIRE_VERSION="version"
 REPERTOIRE_CONNECTEUR="processlist"
 FICHIER_MODULE="aspen.env"
+TYPE_SERVEUR="type"
+#NOM_SERVEUR="mon_serveur"
+VERSION_MAJ="version_maj"
+
 #~~~~~~~~~~~~~~~~~~~~~~~
 
 #-----------------------------------
@@ -45,8 +52,10 @@ lancementTache() {
 
 #-----------------------------------
 # deroulement programme
-# 1. Se placer sous le compte aXigate 
+# 1. Se placer sous le compte aXigate
 #       En executant la commande : "su - login/mdp"
+# 2. Se connecter en shell
+#       En executant la commande : ""
 # 2. Recuperation des elements de monitoring :
 #     - Nom du site "Paris"
 #     - Fonction du serveur "Prod"
@@ -65,8 +74,11 @@ lancementTache() {
 #-----------------------------------
 
 recuperationVersion $REPERTOIRE_VERSION
-recuperationConnecteur $REPERTOIRE_CONNECTEUR 
-recuperationModules $FICHIER_MODULE  
-#recuperationType $TYPE_SERVEUR
+recuperationConnecteur $REPERTOIRE_CONNECTEUR
+recuperationModules $FICHIER_MODULE
+recuperationType $TYPE_SERVEUR
+#recuperationNom $NOM_SERVEUR
+recuperationVersionMajeur $VERSION_MAJ
+#recuperationSite $SITE
 
-ecritureRapport $SITE $NOM $REPERTOIRE_VERSION $TYPE $REPERTOIRE_CONNECTEUR $ETAT $MODULE $IP $SID $PORT #$TYPE_SERVEUR
+ecritureRapport $SITE $NOM $REPERTOIRE_VERSION $TYPE_SERVEUR $REPERTOIRE_CONNECTEUR $ETAT $MODULE $IP $SID $PORT $VERSION_MAJ #$NOM_SERVEUR
