@@ -48,6 +48,7 @@ VERSION_MAJ="version_maj"
 lancementTache() {
    echo "lancement de la tache"
    # TODO : ... Claudie
+   #
 }
 
 #-----------------------------------
