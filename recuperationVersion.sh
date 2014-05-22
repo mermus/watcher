@@ -8,7 +8,7 @@
 
 # recuperation de la version du logiciel
 #############################
-# version.txt
+# versionaxigate.txt
 #############################
 
 recuperationVersion() {
@@ -17,11 +17,7 @@ recuperationVersion() {
    # recuperation du fichier contenant la version
    REPERTOIRE_VERSION=$1
 
-   # ls -got $REPERTOIRE : on affiche les fichiers classe par rdre de creation de haut en bas 
-   # grep \version       : on affiche les fichiers avec le template versionXXX
-   # head -1             : on affiche le  fichier  le plus recent
-   # awk '{print $6}'    : on affiche le  nom du fichier le plus recent
-   REPERTOIRE_VERSION=`ls -got $REPERTOIRE_VERSION | grep \version | head -1 | awk '{print $6}'`
-   
+   # Affiche le fichier versionaxigate.txt qui contient la version la plus recent installe sur le serveur
+   REPERTOIRE_VERSION=`cat /axihome/local/axigate/versionaxigate.txt`
+
    echo "recuperation de la version : fin"
-}
