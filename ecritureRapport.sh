@@ -38,28 +38,32 @@ ecritureRapport() {
    IP=$8
    SID=$9
    PORT=${10}
+   VERSION_MAJ=${11}
+   NOM_SERVEUR=${12}
 
    # Si on a des informations on peut afficher
-   if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP ] || [ PORT ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ MODULE ] || [ SID ]
+   if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP ] || [ PORT ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ MODULE ] || [ SID ] || [NOM_SERVEUR] || [VERSION_MAJ]
    then
       echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"         >> report.txt
       echo ""                                    >> report.txt
       echo `date +%d/%m/%Y%t%k:%M`               >> report.txt
-      printf "%-12s" "SITE"       ":$SITE"       >> report.txt; echo "" >> report.txt
-      printf "%-12s" "NOM"        ":$NOM"        >> report.txt; echo "" >> report.txt
-      printf "%-12s" "VERSION"    ":$VERSION"    >> report.txt; echo "" >> report.txt
-      printf "%-12s" "TYPE"       ":$TYPE"       >> report.txt; echo "" >> report.txt
-      printf "%-12s" "CONNECTEUR" ":$CONNECTEUR" >> report.txt; echo "" >> report.txt
-      printf "%-12s" "ETAT"       ":$ETAT"       >> report.txt; echo "" >> report.txt
-      printf "%-12s" "MODULE"     ":$MODULE"     >> report.txt; echo "" >> report.txt
-      printf "%-12s" "IP"         ":$IP"         >> report.txt; echo "" >> report.txt
-      printf "%-12s" "SID"        ":$SID"        >> report.txt; echo "" >> report.txt
-      printf "%-12s" "PORT"       ":$PORT"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "SITE"        ":$SITE"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "NOM"         ":$NOM"        >> report.txt; echo "" >> report.txt
+      printf "%-15s" "VERSION"     ":$VERSION"    >> report.txt; echo "" >> report.txt
+      printf "%-15s" "TYPE"        ":$TYPE"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "CONNECTEUR"  ":$CONNECTEUR" >> report.txt; echo "" >> report.txt
+      printf "%-15s" "ETAT"        ":$ETAT"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "MODULE"      ":$MODULE"     >> report.txt; echo "" >> report.txt
+      printf "%-15s" "IP"          ":$IP"         >> report.txt; echo "" >> report.txt
+      printf "%-15s" "SID"         ":$SID"        >> report.txt; echo "" >> report.txt
+      printf "%-15s" "PORT"        ":$PORT"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "VERSION_MAJ" ":$VERSION_MAJ" >> report.txt; echo "" >> report.txt
+      printf "%-15s" "NOM_SERVEUR" ":$NOM_SERVEUR" >> report.txt; echo "" >> report.txt
       echo ""                                    >> report.txt
       echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"         >> report.txt
    else
       echo "Error writing the report"
-      exit 1 
+      exit 1
    fi
    echo "ecriture du rapport : fin "
 }
