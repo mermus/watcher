@@ -17,7 +17,7 @@
 # CONNECTEUR : xxx
 # ETAT       : xxx
 # MODULE     : xxx
-# IP         : xxx.xxx.xxx.xxx
+# IP_SERVEUR         : xxx.xxx.xxx.xxx
 # SID        : xxx
 # PORT       : xxx
 #
@@ -35,14 +35,14 @@ ecritureRapport() {
    CONNECTEUR=$5
    ETAT=$6
    MODULE=$7
-   IP=$8
+   IP_SERVEUR=$8
    SID=$9
    PORT=${10}
    VERSION_MAJ=${11}
    NOM_SERVEUR=${12}
 
    # Si on a des informations on peut afficher
-   if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP ] || [ PORT ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ MODULE ] || [ SID ] || [NOM_SERVEUR] || [VERSION_MAJ]
+   if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP_SERVEUR ] || [ PORT ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ MODULE ] || [ SID ] || [ NOM_SERVEUR ] || [ VERSION_MAJ ]
    then
       echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"         >> report.txt
       echo ""                                    >> report.txt
@@ -54,7 +54,7 @@ ecritureRapport() {
       printf "%-15s" "CONNECTEUR"  ":$CONNECTEUR" >> report.txt; echo "" >> report.txt
       printf "%-15s" "ETAT"        ":$ETAT"       >> report.txt; echo "" >> report.txt
       printf "%-15s" "MODULE"      ":$MODULE"     >> report.txt; echo "" >> report.txt
-      printf "%-15s" "IP"          ":$IP"         >> report.txt; echo "" >> report.txt
+      printf "%-15s" "IP_SERVEUR"  ":$IP_SERVEUR" >> report.txt; echo "" >> report.txt
       printf "%-15s" "SID"         ":$SID"        >> report.txt; echo "" >> report.txt
       printf "%-15s" "PORT"        ":$PORT"       >> report.txt; echo "" >> report.txt
       printf "%-15s" "VERSION_MAJ" ":$VERSION_MAJ" >> report.txt; echo "" >> report.txt
