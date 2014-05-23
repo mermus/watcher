@@ -16,7 +16,8 @@ recuperationVersionMajeur() {
 
    # recuperation du fichier contenant la version
    VERSION_MAJ=$1
-   VERSION_MAJ=`ls -r $PLTDIR/axilink/templates_fr/versions/versionaxigate/ | cut -f1,2 -d"." | head -1`
+   #VERSION_MAJ=`ls -r $PLTDIR/axilink/templates_fr/versions/versionaxigate/ | cut -f1,2 -d"." | head -1`
+   VERSION_MAJ=`ls -r repaxigate/axilink/templates_fr/versions/versionaxigate/ | cut -f1,2 -d"." | head -1`
 
    echo "recuperation de la version majeur : fin"
 }
