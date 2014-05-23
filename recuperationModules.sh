@@ -8,9 +8,9 @@
 
 
 # recuperation des modules
-#############################
-# aspen.env
-#############################
+###############################
+# Backup du fichier aspen.env
+###############################
 # - module
 # - ip server
 # - SID
@@ -21,9 +21,13 @@ recuperationModules() {
    echo "recuperation du module : debut"
 
    # recuperation du fichier contenant les modules
-   FICHIER=$1
-   echo $FICHIER
+   MODULE=$1
 
+   # touch backupaspen.txt                      : creation du fichier de backup
+   # cat repaxigate/axilink/resources/aspen.txt : recuperation du contenu du fichier aspen.txt
+   # >> backupaspen.txt                         : redirection de la sorte standard vers le fichier backupaspen.txt
+
+   MODULE=`touch backupaspen.txt | cat $PLTDIR/axilink/resources/aspen.env >> backupaspen.txt`
+  # MODULE=`touch backupaspen.txt | cat repaxigate/axilink/resources/aspen.txt >> backupaspen.txt`
    echo "recuperation du module : fin"
 }
-
