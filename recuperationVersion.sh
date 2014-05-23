@@ -18,8 +18,8 @@ recuperationVersion() {
    REPERTOIRE_VERSION=$1
 
    # Affiche le fichier versionaxigate.txt qui contient la version la plus recent installe sur le serveur
-   REPERTOIRE_VERSION=`cat $PLTDIR/versionaxigate.txt`
-   #REPERTOIRE_VERSION=`cat repaxigate/versionaxigate.txt`
+   #REPERTOIRE_VERSION=`cat $PLTDIR/versionaxigate.txt`
+   REPERTOIRE_VERSION=`cat repaxigate/versionaxigate.txt`
 
    echo "recuperation de la version : fin"
 }
