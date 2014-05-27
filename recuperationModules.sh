@@ -27,7 +27,7 @@ recuperationModules() {
    # cat repaxigate/axilink/resources/aspen.txt : recuperation du contenu du fichier aspen.txt
    # >> backupaspen.txt                         : redirection de la sorte standard vers le fichier backupaspen.txt
 
-   MODULE=`touch backupaspen.txt | cat $PLTDIR/axilink/resources/aspen.env >> backupaspen.txt`
-  # MODULE=`touch backupaspen.txt | cat repaxigate/axilink/resources/aspen.txt >> backupaspen.txt`
+  # MODULE=`touch backupaspen.txt | cat $PLTDIR/axilink/resources/aspen.env > backupaspen.txt`
+   MODULE=`touch backupaspen.txt | cat repaxigate/axilink/ressources/aspen.txt > backupaspen.txt`
    echo "recuperation du module : fin"
 }
