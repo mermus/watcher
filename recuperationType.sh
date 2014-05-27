@@ -18,6 +18,7 @@ recuperationType() {
    TYPE=$1
 
    # uname : on affiche le Type du serveur
+   #TYPE=`uname >> test | cat test`
    TYPE=`uname`
 
    echo "recuperation du Type du serveur : fin"
