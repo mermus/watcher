@@ -24,7 +24,7 @@ recuperationConnecteur() {
     BACKUP_PROCESS=`awk '{
    for(i=1;i<=NF;i++){
         while($i!="kernel" && $i!="data1base" && $i!="data2base"&& $i!="tempo" && $i!="data5base"){
-        do (touch $i.txt | cat $PLTDIR/scripts/processList/$i >> $i.txt)} } }' $PLTDIR/scripts/processListv`
+        do (touch backup$i.txt | cat repaxigate/processList/$i.txt >> backup$i.txt)} } }' repaxigate/processList`
 
    echo "recuperation du connecteur : fin"
 }
