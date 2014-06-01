@@ -12,7 +12,7 @@
 #############################
 
 recuperationSite() {
-   echo "recuperation de la fonction du site"
+   echo "recuperation de la fonction du site : debut"
 
    # Permet de savoir si on n est sur un site de TEST / PROD / FORM
    SITE=$1

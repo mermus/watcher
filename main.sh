@@ -14,6 +14,7 @@ source recuperationType.sh
 source recuperationNom.sh
 source recuperationSite.sh
 source recuperationVersionMajeur.sh
+source recuperationIP.sh
 #source recuperationProcess.sh
 
 # Tests Unitaires
@@ -71,6 +72,7 @@ recuperationVersionMajeur $VERSION_MAJ
 recuperationModules $FICHIER_MODULE
 recuperationNom $NOM
 recuperationSite $SITE
+recuperationIP $IP
 #recuperationProcess $BACKUP_PROCESS
 
 ecritureRapport $SITE $NOM $VERSION $TYPE $CONNECTEUR $VERSION_MAJ $IP $ETAT #$MODULE
