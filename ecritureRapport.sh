@@ -41,20 +41,20 @@ ecritureRapport() {
    # Si on a des informations on peut afficher
    if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP_SERVEUR ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ NOM_SERVEUR ] || [ VERSION_MAJ ]
    then
-      echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"         >> report.txt
-      echo ""                                    >> report.txt
-      echo `date +%d/%m/%Y%t%k:%M`               >> report.txt
-      printf "%-15s" "SITE"        ":$SITE"       >> report.txt; echo "" >> report.txt
-      printf "%-15s" "NOM"         ":$NOM"        >> report.txt; echo "" >> report.txt
-      printf "%-15s" "VERSION"     ":$VERSION"    >> report.txt; echo "" >> report.txt
-      printf "%-15s" "TYPE"        ":$TYPE"       >> report.txt; echo "" >> report.txt
-      printf "%-15s" "CONNECTEUR"  ":$CONNECTEUR" >> report.txt; echo "" >> report.txt
+      echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"           >> report.txt
+      echo ""                                      >> report.txt
+      echo `date +%d/%m/%Y%t%k:%M`                 >> report.txt
+      printf "%-15s" "SITE"        ":$SITE"        >> report.txt; echo "" >> report.txt
+      printf "%-15s" "NOM"         ":$NOM"         >> report.txt; echo "" >> report.txt
+      printf "%-15s" "VERSION"     ":$VERSION"     >> report.txt; echo "" >> report.txt
+      printf "%-15s" "TYPE"        ":$TYPE"        >> report.txt; echo "" >> report.txt
+      printf "%-15s" "CONNECTEUR"  ":$CONNECTEUR"  >> report.txt; echo "" >> report.txt
       printf "%-15s" "VERSION_MAJ" ":$VERSION_MAJ" >> report.txt; echo "" >> report.txt
       printf "%-15s" "IP_SERVEUR"  ":$IP"          >> report.txt; echo "" >> report.txt
-      printf "%-15s" "ETAT"        ":$ETAT"       >> report.txt; echo "" >> report.txt
+      printf "%-15s" "ETAT"        ":$ETAT"        >> report.txt; echo "" >> report.txt
       printf "%-15s" "NOM_SERVEUR" ":$NOM_SERVEUR" >> report.txt; echo "" >> report.txt
-      echo ""                                    >> report.txt
-      echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"         >> report.txt
+      echo ""                                      >> report.txt
+      echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"           >> report.txt
    else
       echo "Error writing the report"
       exit 1
