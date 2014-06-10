@@ -15,7 +15,6 @@ source recuperationNom.sh
 source recuperationSite.sh
 source recuperationVersionMajeur.sh
 source recuperationIP.sh
-#source recuperationProcess.sh
 
 # Tests Unitaires
 #~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,7 +26,6 @@ CONNECTEUR="Laboratoire"
 VERSION_MAJ="version_maj"
 IP="10.10.43.42"
 ETAT="ON_or_OF"
-#REPERTOIRE_CONNECTEUR="processlist"
 
 #~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,6 +71,5 @@ recuperationModules $FICHIER_MODULE
 recuperationNom $NOM
 recuperationSite $SITE
 recuperationIP $IP
-#recuperationProcess $BACKUP_PROCESS
 
-ecritureRapport $SITE $NOM $VERSION $TYPE $CONNECTEUR $VERSION_MAJ $IP $ETAT #$MODULE
+ecritureRapport $SITE $NOM $VERSION $TYPE $CONNECTEUR $VERSION_MAJ $IP $ETAT 

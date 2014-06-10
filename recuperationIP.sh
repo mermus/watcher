@@ -18,7 +18,9 @@ recuperationIP() {
    IP=$1
 
    # hostname -i : affiche l'@ IP du serveur
-   IP=`hostname -i`
+   #IP=`hostname -i`
+   IP=`ifconfig wlan | grep -o "inet adr:[0-9.]*" | cut -f2 -d":"`
 
    echo "recuperation de l'IP du serveur : fin"
 }
+

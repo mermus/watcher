@@ -36,7 +36,7 @@ ecritureRapport() {
    VERSION_MAJ=$6
    IP_SERVEUR=$7
    ETAT=$8
-   NOM_SERVEUR=$9
+#   NOM_SERVEUR=$9
 
    # Si on a des informations on peut afficher
    if [ VERSION ] || [ CONNECTOR ] || [ ETAT ] || [ IP_SERVEUR ] || [ SITE ] || [ NOM ] || [ TYPE ] || [ NOM_SERVEUR ] || [ VERSION_MAJ ]
@@ -52,7 +52,7 @@ ecritureRapport() {
       printf "%-15s" "VERSION_MAJ" ":$VERSION_MAJ" >> report.txt; echo "" >> report.txt
       printf "%-15s" "IP_SERVEUR"  ":$IP"          >> report.txt; echo "" >> report.txt
       printf "%-15s" "ETAT"        ":$ETAT"        >> report.txt; echo "" >> report.txt
-      printf "%-15s" "NOM_SERVEUR" ":$NOM_SERVEUR" >> report.txt; echo "" >> report.txt
+#      printf "%-15s" "NOM_SERVEUR" ":$NOM_SERVEUR" >> report.txt; echo "" >> report.txt
       echo ""                                      >> report.txt
       echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@"           >> report.txt
    else
